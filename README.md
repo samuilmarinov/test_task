@@ -32,5 +32,6 @@ dummy gate - admin check
 
 check for `Move` update conditions
 line 100 - `app -> http -> controllers -> ApiController.php`
+only key to test with `PUT` request is `stage_id` values from 1 to 3
 
 Ta..
