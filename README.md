@@ -26,4 +26,11 @@ http://samuilmarinovdev2.co.uk/api/application/move/{$id}
 Trying to update an application that doesn't match the allowed criteria triggers a 
 response prompting you to check the Charity status and details.
 
+`Gate`
+dummy gate - admin check
+app -> providers -> AuthServiceProvider.php
+
+check for `Move` update conditions
+line 100 app -> http -> controllers -> ApiController.php
+
 Ta..
