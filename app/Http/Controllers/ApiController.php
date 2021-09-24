@@ -75,13 +75,14 @@ class ApiController extends Controller
       
     public function move(Request $request, $id) {
         $user = 'administrator';
-        if (Gate::forUser($user)->denies('isAllowed', $user)) { 
+        $application_id = application::find($id);
+        $application_exists = Application::where('id', $id)->first();
+        if (Gate::forUser($user)->denies('isAllowed', $user) OR $application_exists === null) { 
               return response()->json([
                 "message" => "not allowed"
             ], 404); 
         }else{  
             // check if application's assigned charity is approved
-            $application_id = application::find($id);
             $charity_id_check = $application_id->charity_id;
             $is_aproved_charity = getCharityStatus($charity_id_check);
             // get country code
