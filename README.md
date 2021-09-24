@@ -28,9 +28,9 @@ response prompting you to check the Charity status and details.
 
 `Gate`
 dummy gate - admin check
-app -> providers -> AuthServiceProvider.php
+`app -> providers -> AuthServiceProvider.php`
 
 check for `Move` update conditions
-line 100 app -> http -> controllers -> ApiController.php
+line 100 - `app -> http -> controllers -> ApiController.php`
 
 Ta..
