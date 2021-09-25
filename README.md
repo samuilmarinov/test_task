@@ -5,6 +5,8 @@
 Run locally:
 (vendors folder not included so you'll have to run `composer` to test locally)
 -  `composer install`
+-   confiig the DB credentials in the .ENV
+-  `php artisan migrate`
 -  `php artisan serve`
 -  `http://localhost:8000`
 
